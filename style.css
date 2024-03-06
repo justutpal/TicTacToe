@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding: 0 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(243, 228, 255);
+    cursor: pointer;
+}
+
+.bigwork {
+    animation: big 1s linear 0s infinite none;
+}
+
+@keyframes big { 0% { font-size: 50%; color: red;}
+                 25% {font-size: 100%; color: yellow;}
+                 50% {font-size: 150%; color: green;}
+                 100% {font-size: 200%; color: pink;}
+
+}
+
+.gameInfo {
+    padding: 0 25px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.info {
+    font-size: 23px;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+#reset {
+    margin:0 15px ;
+    padding:0 15px ;
+    background-color: rgb(252, 219, 252);
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .gameContainer {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30vh 70vh;
+    }
+
+    .gameInfo {
+        margin: 25px 0;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+
+    .container {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        grid-template-rows: 33% 33% 33%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    body {
+        display: none;
+    }
+}
